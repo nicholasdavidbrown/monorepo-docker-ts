@@ -31,4 +31,6 @@ PGADMIN_DEFAULT_PASSWORD=root
 PGADMIN_PORT=5055
 ```
 
-3. Run `make local` to run the docker-compose and start containers.
+3. Run `docker compose watch` to run the docker-compose and start containers in development mode.
+
+4. Navigate to the PGAdmin dashboard and create a new server with the credentials and DB name (hostname) set in the environment.

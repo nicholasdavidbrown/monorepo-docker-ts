@@ -5,12 +5,17 @@ services:
     build:
       context: ./packages/frontend
       dockerfile: Dockerfile.local
+    develop:
+      watch:
+        - path: ./packages/frontend/src
+          action: sync
+          target: /usr/app/src
+        - path: ./packages/frontend/package.json
+          action: rebuild
     restart: always
     env_file: .env
     ports:
       - "${FRONTEND_PORT}:${FRONTEND_PORT}"
-    volumes:
-      - "./packages/frontend/src:/usr/src/app/src"
     networks:
       - bp-network
     command: "npm start"
@@ -20,11 +25,16 @@ services:
     build:
       context: ./packages/backend
       dockerfile: Dockerfile.local
+    develop:
+      watch:
+        - path: ./packages/backend/src
+          action: sync
+          target: /svr/app/src
+        - path: ./packages/backend/package.json
+          action: rebuild
     restart: always
     env_file: .env
     volumes:
-      - ./packages/backend:/svr/app
-      - "./scripts/wait.sh:/wait.sh"
       - /svr/app/node_modules
     networks:
       - bp-network
