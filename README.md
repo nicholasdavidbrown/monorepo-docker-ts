@@ -34,3 +34,9 @@ PGADMIN_PORT=5055
 3. Run `docker compose watch` to run the docker-compose and start containers in development mode.
 
 4. Navigate to the PGAdmin dashboard and create a new server with the credentials and DB name (hostname) set in the environment.
+
+## Lerna Monorepo
+
+This project uses Lerna to manage the monorepo. The `lerna.json` file contains the configuration for the monorepo.
+
+Cast AI - https://cast.ai/

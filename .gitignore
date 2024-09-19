@@ -3,3 +3,8 @@
 /**/dist/
 .vscode
 .env
+
+lerna-debug.log
+npm-debug.log
+packages/*/lib
+.idea
