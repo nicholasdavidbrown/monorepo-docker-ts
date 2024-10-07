@@ -1,4 +1,4 @@
-# Nextbook - React and NestJS Monorepo with PostgreSQL deployed via Docker
+# Monorepo - React and NestJS Monorepo with PostgreSQL deployed via Docker
 
 ## Installation
 
